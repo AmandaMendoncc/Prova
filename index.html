@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo & Mônica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">E & M</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Presentes</a></li>
+                <li><a href="#">Confirmar Presença</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Eduardo & Mônica</h1>
+            <p class="wedding-date">26.11.2025</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <h1>CONTAGEM REGRESSIVA PARA O GRANDE DIA</h1>
+        <div class="countdown">
+            <div class="time-block">
+                <span class="time-number">364</span>
+                <span class="time-label">Dias</span>
+            </div>
+            <div class="time-block">
+                <span class="time-number">14</span>
+                <span class="time-label">Horas</span>
+            </div>
+            <div class="time-block">
+                <span class="time-number">43</span>
+                <span class="time-label">Minutos</span>
+            </div>
+            <div class="time-block">
+                <span class="time-number">7</span>
+                <span class="time-label">Segundos</span>
+            </div>
+        </div>
+
+        <h2>Sejam bem-vindos ao nosso site!</h2>
+
+        <p class="intro-text">A MELHOR FORMA DE COMPARTILHAR ESSE MOMENTO COM VOCÊS É VIVENDO JUNTOS ESSE SONHO!</p>
+        <div class="divider"></div>
+        <p class="description">
+            Aqui vamos contar à vocês, queridos amigos e familiares, os momentos mais marcantes da nossa história de
+            amor.
+            A contagem regressiva começa, o frio na barriga e toda a ansiedade do dia mais esperado de nossas vidas nos
+            enche de alegria em tê-los ao nosso lado.
+            Vamos juntos nesse grande sonho, o dia em que uniremos nossas almas e corpos para sempre, o dia do nosso
+            casamento.
+        </p>
+    </div>
+    <div class="photo-section">
+        <img src="image/destaque.png" alt="Casal em momento especial" class="main-photo">
+    </div>
+
+    <section class="rsvp-section">
+        <h2>Confirme sua Presença</h2>
+        <form class="rsvp-form" action="#" method="post">
+          <div class="form-group">
+            <label for="name">Nome completo *</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+          </div>
+      
+          <div class="form-group">
+            <label>Você irá ao evento?</label>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="attendance" value="sim" required> Sim
+              </label>
+              <label>
+                <input type="radio" name="attendance" value="não" required> Não
+              </label>
+            </div>
+          </div>
+      
+          <div class="form-group">
+            <label for="phone">Telefone *</label>
+            <div class="phone-input">
+              <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone" required>
+            </div>
+          </div>
+      
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+          </div>
+      
+          <div class="form-group">
+            <label>Quantos acompanhantes?</label>
+            <div class="counter">
+              <button type="button" class="decrement">−</button>
+              <input type="number" id="companions" name="companions" value="0" min="0" readonly>
+              <button type="button" class="increment">+</button>
+            </div>
+          </div>
+      
+          <button type="submit" class="submit-button">Responder</button>
+        </form>
+      </section>
+      
+
+    <div class="gallery">
+        <img src="image/foto1.jpg" alt="Foto 1">
+        <img src="image/foto2.jpg" alt="Foto 2">
+        <img src="image/foto3.jpg" alt="Foto 3">
+        <img src="image/foto4.jpg" alt="Foto 4">
+        <img src="image/foto5.jpg" alt="Foto 5">
+        <img src="image/foto6.jpg" alt="Foto 6">
+    </div>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-pinterest"></i></a>
+        </div>
+        <br>
+        <p class="amanda">© Amanda Alves Mendonça</p>
+    </footer>
+</body>
+
+<script>
+    const decrementButton = document.querySelector('.decrement');
+    const incrementButton = document.querySelector('.increment');
+    const companionsInput = document.querySelector('#companions');
+  
+    decrementButton.addEventListener('click', () => {
+      let value = parseInt(companionsInput.value);
+      if (value > 0) {
+        companionsInput.value = value - 1;
+      }
+    });
+  
+    incrementButton.addEventListener('click', () => {
+      let value = parseInt(companionsInput.value);
+      companionsInput.value = value + 1;
+    });
+  </script>
+  
+</html>
